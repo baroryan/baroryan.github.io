@@ -37,7 +37,7 @@
 									<header class="main">
 
 									</header>
-									<h3>Time Lapse from my office window </h3>
+									<h3>1) Time Lapse from my office window </h3>
 								<pr> Trying to take advantage of the astonishing 4 seasons we have here at Lamont-Doherty I setup an old smart phone to take pictures from my office window. My intention is then to turn these pictures to timelapse. To do so, I configured my phone to take a picture every hour during the day using these very simple tools:</pr>
 								<br>
 									<br>
@@ -74,7 +74,68 @@
 						    src="https://www.youtube.com/embed/8lSygeFBIPM">
 						</iframe>
 					</center>
+
+					<br><br>
+					<h3>2) Homemade temperature and humidity sensors </h3>
+					<pr> Using a few very cheap microcheaps, sensors, arduino and MQTT protocol I built a few sensors that upload their data to an online database that
+						is acessible online. Use these links to monitor the outdoors temperature at <a href="https://io.adafruit.com/baroryan/dashboards/lamont">Lamont</a>
+						and <a href="https://io.adafruit.com/baroryan/dashboards/home">my place</a> <br> Here are some of the parts I've used:<br><br> </pr>
+						<li> <a href="https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK" >Wemos d1 mini microcheap </a>  - Used to control the sensors and upload data to the database using MQTT</li>
+						<li> <a href="https://www.aliexpress.com/item/4000047757174.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK" >AHT10 High Precision Digital Temperature and Humidity Sensor </a> - Indoors temperature and humidity sensor</li>
+						<li> <a href="https://www.aliexpress.com/item/4000143479592.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK" >DS18B20  Temperature Sensor  </a> - Outdoors waterproof temperature sensor</li>
+
+						<br><br>
+						<div class="box alt">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="DIYPics/pic1.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="DIYPics/pic2.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="DIYPics/pic3.jpg" alt="" /></span></div>
+						</div>
+
+						</span>
+						<br><br>
+						<pr> The <a href="https://www.adafruit.com/">Adafruit</a> website has a collection of really good manuals in case you are interested to build one of these yourself. Also I'm happy to provide the Ardiuno code I've used.
 									<!-- Elements -->
+
+						<br><br>
+
+						<h3>3) The LDEO PhenoCam network </h3>
+						<pr>
+						Using funds from the Chevron Student Initiative Fund <a href="https://www.ldeo.columbia.edu/user/mukund"> Mukund Rao </a> and I deisgned and devloped the
+						LDEO PhenoCam network. We did this to track
+						hourly to seasonal changes in the forest canopy, tree growth, and their relationship with environmental variables
+						in forest stands at the Lamont campus.  Forests play a major role in the global carbon cycle as terrestrial ecosystems
+						have offset nearly 20% of anthropogenic carbon-dioxide emissions from fossil fuel burning.
+						They uptake carbon through photosynthesis, return much of it through respiration, and accumulate some fraction as biomass.
+						However, climate change is rapidly impacting the seasonal cycle of terrestrial
+						photosynthesis and the ability of forests to remain as active carbon sinks to offset anthropogenic emissions. We will use this system to
+					track these changes hoping to shed light on how forest react to climate change.</pr>
+
+				<br><br> <pr> The design of this system is based on three different components some of which are already illustrated above. In the heart of the system
+					lies a few infrared cameras that guarantee coverage of large sections of the forest canopy in the region of Lamont. We have devloped our own camera solution using Raspberry Pi but
+					have also used a proven
+					soultion in the form a starDot camera. You can see live feed of the starDot camera <a href="http://ldeo-phenocam-stardot.ldeo.columbia.edu/">here</a>.
+						Old pictuers can be accessed <a href="https://phenocam.sr.unh.edu/webcam/sites/ldeocam/">here</a>.
+					We have also used dendrometers that were installed on two trees within the PhenoCam field of view so as to provide us co-located measurements of carbon
+					 uptake from photosynthesis and growth. Data can be accessed <a href="https://ecosensornetwork.com/app/auth/"> here </a>.
+					 Lastly we have installed a temperature sensor at <a href="https://io.adafruit.com/baroryan/dashboards/lamont">Lamont</a>. <br> <br>
+					 They even wrote a short piece about our system! For more details read here <a href="https://blogs.ei.columbia.edu/2020/11/03/phenocam-forests-climate-change/" >here </a>. </pr>
+
+					 <br><br>
+					 <div class="box alt">
+						 <div class="row gtr-50 gtr-uniform">
+							 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam01.jpg" alt="" /></span></div>
+							 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam02.jpg" alt="" /></span></div>
+							 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam03.jpg" alt="" /></span></div>
+							 <div class="row gtr-50 gtr-uniform">
+								 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam04.jpg" alt="" /></span></div>
+								 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam05.jpg" alt="" /></span></div>
+								 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam06.jpg" alt="" /></span></div>
+							 </div>
+					 </div>
+
+
+
 
 										<div class="row gtr-200">
 											<div class="col-6 col-12-medium">
