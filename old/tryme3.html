@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>DIY Projects | Bar Oryan</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            width: 200px;
+            height: 150px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-container iframe:hover {
+            transform: scale(1.5);
+        }
+
+        .project-title {
+            font-size: 16px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+            <p>
+                While I study earthquake cycles, I occasionally enjoy using Arduino coding, soldering, and inexpensive microchips and sensors to develop tools that can be used to create engaging demonstrations or even to study climate change. Here are some DIY projects I designed and built using affordable tools that anyone can acquire online.
+            </p>
+
+            <div class="video-container">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/iq37QS9o34M" allowfullscreen></iframe>
+                    <div class="project-title">Daily Time-Lapse: Nov 2018 - May 2020</div>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/Mc-U18n0AH0" allowfullscreen></iframe>
+                    <div class="project-title">Hourly Time-Lapse: Spring 2020</div>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/8lSygeFBIPM" allowfullscreen></iframe>
+                    <div class="project-title">Hourly Time-Lapse: Spring 2019</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() { document.body.classList.remove('is-preload'); }
+        window.ontouchmove = function() { return false; }
+        window.onorientationchange = function() { document.body.scrollTop = 0; }
+    </script>
+</body>
+</html>

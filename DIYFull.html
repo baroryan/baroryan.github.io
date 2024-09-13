@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bar Oryan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assetsFULL/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<strong>DIY projects</strong> 
+
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+
+									</header>
+
+									<p> <font size="+2">E</font>ven though I study earthquake cycles, for fun, I like to use Arduino coding, soldering, and cheap microchips and sensors to develop tools that can be used to form enticing demonstrations or even to study climate change. Here are some DIY projects I designed and built using very cheap tools that everyone can acquire online:  </p>
+
+									<h3>1) Time Lapse from my office window </h3>
+								<pr> Trying to take advantage of the astonishing 4 seasons we have here at Lamont-Doherty I setup an old smart phone to take pictures from my office window. My intention is then to turn these pictures to timelapse. To do so, I configured my phone to take a picture every hour during the day using these very simple tools:</pr>
+								<br>
+									<br>
+									<ul>
+										<li>Android OnePlus A3010 with 64 GB </li>
+										<li><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=en_US">Tasker app</a> - Used to take a picture every hour</li>
+										<li><a href="https://play.google.com/store/apps/details?id=com.joaomgcd.autoinput&hl=en_US"> AutoInput app </a> - Used to unlock the screen before taking the pictures . Finding out I need this app took some trial and error. </li>
+										<li><a href="https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite&hl=en_US"> Foldersync app</a> – Used to upload the pictures to my cloud every night so I don’t need to touch the phone. </li>
+										<li><a href="https://www.apple.com/imovie/"> imovie</a> – Used to edit the pictures into a movie. </li>
+										<li><a href="https://imagemagick.org/script/convert.php"> Convert</a> – Used to add text to the pictuers. </li>
+									</ul>
+
+									<pr>In cold regions where the difference between  indoor and outdoor temperatures can be quite extreme I suggest using some sort of isolation material to sperate the phone from the window. The easiest solution is probably cardboard. I haven’t been using any and my phone has starting to show signs of fatigue. The screen is all dented, I suspect it has to do with the temperature fluctuations it experiences.</pr>
+<br><br><pr>Either way, enough said, here are some examples of how the scenery at Lamont-Doherty changes with time:</pr>
+						<br><br>
+						<h4>Daily, Nov 2018-May 2020:</h4>
+						<center>
+													<iframe width="960" height="540"
+						    src="https://www.youtube.com/embed/iq37QS9o34M">
+						</iframe>
+					</center>
+
+					<h4>Hourly, Spring 2020:</h4>
+					<center>
+												<iframe width="960" height="540"
+							src="https://www.youtube.com/embed/Mc-U18n0AH0">
+					</iframe>
+				</center>
+
+					<br><br>
+						<h4>Hourly, Spring 2019:</h4>
+						<center>
+													<iframe width="960" height="540"
+						    src="https://www.youtube.com/embed/8lSygeFBIPM">
+						</iframe>
+					</center>
+
+					<br><br>
+					<h3>2) Temperature and humidity sensors </h3>
+					<pr> Using a few cheap microcheaps, sensors, arduino and MQTT protocol I built a few sensors that upload their data to an online database that
+						is acessible online. Use these links to monitor the outdoors temperature at <a href="https://io.adafruit.com/baroryan/dashboards/lamont">Lamont</a>
+						and <a href="https://io.adafruit.com/baroryan/dashboards/living-room">my place</a> <br> Here are some of the parts I've used:<br><br> </pr>
+						<li> <a href="https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK" >Wemos d1 mini microcheap </a>  - Used to control the sensors and upload data to the database using MQTT</li>
+						<li> <a href="https://www.aliexpress.com/item/4000047757174.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK" >AHT10 High Precision Digital Temperature and Humidity Sensor </a> - Indoors temperature and humidity sensor</li>
+						<li> <a href="https://www.aliexpress.com/item/4000143479592.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK" >DS18B20  Temperature Sensor  </a> - Outdoors waterproof temperature sensor</li>
+
+						<br><br>
+						<div class="box alt">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="DIYPics/pic1.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="DIYPics/pic2.jpg" alt="" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="DIYPics/pic3.jpg" alt="" /></span></div>
+						</div>
+
+						</span>
+						<br><br>
+						<pr> The <a href="https://www.adafruit.com/">Adafruit</a> website has a collection of really good manuals in case you are interested to build one of these yourself. Also I'm happy to provide the Ardiuno code I've used.
+									<!-- Elements -->
+
+						<br><br>
+
+						<h3>3) The LDEO PhenoCam network </h3>
+						<pr>
+						Using funds from the Chevron Student Initiative Fund <a href="https://www.ldeo.columbia.edu/user/mukund"> Mukund Rao </a> and I deisgned and devloped the
+						LDEO PhenoCam network. We did this to track
+						hourly to seasonal changes in the forest canopy, tree growth, and their relationship with environmental variables
+						in forest stands at the Lamont campus.  Forests play a major role in the global carbon cycle as terrestrial ecosystems
+						have offset nearly 20% of anthropogenic carbon-dioxide emissions from fossil fuel burning.
+						They uptake carbon through photosynthesis, return much of it through respiration, and accumulate some fraction as biomass.
+						However, climate change is rapidly impacting the seasonal cycle of terrestrial
+						photosynthesis and the ability of forests to remain as active carbon sinks to offset anthropogenic emissions. We will use this system to
+					track these changes hoping to shed light on how forest react to climate change.</pr>
+
+				<br><br> <pr> The design of this system is based on three different components some of which are already illustrated above. In the heart of the system
+					lies a few infrared cameras that guarantee coverage of large sections of the forest canopy in the region of Lamont. We have devloped our own camera solution using Raspberry Pi but
+					have also used a proven
+					soultion in the form of a starDot camera. You can see live feed of the starDot camera <a href="http://ldeo-phenocam-stardot.ldeo.columbia.edu/">here</a>.
+						Old pictuers can be accessed <a href="https://phenocam.sr.unh.edu/webcam/sites/ldeocam/">here</a>.
+					We have also used dendrometers that were installed on two trees within the PhenoCam field of view so as to provide us co-located measurements of carbon
+					 uptake from photosynthesis and growth. Data can be accessed <a href="https://ecosensornetwork.com/app/auth/"> here </a>.
+					 Lastly we have installed a temperature sensor at <a href="https://io.adafruit.com/baroryan/dashboards/lamont">Lamont</a>. <br> <br>
+					 They even wrote a short piece about our system! For more details read here <a href="https://blogs.ei.columbia.edu/2020/11/03/phenocam-forests-climate-change/" >here </a>. </pr>
+
+					 <br><br>
+					 <div class="box alt">
+						 <div class="row gtr-50 gtr-uniform">
+							 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam01.jpg" alt="" /></span></div>
+							 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam02.jpg" alt="" /></span></div>
+							 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam03.jpg" alt="" /></span></div>
+							 <div class="row gtr-50 gtr-uniform">
+								 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam04.jpg" alt="" /></span></div>
+								 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam05.jpg" alt="" /></span></div>
+								 <div class="col-4"><span class="image fit"><img src="DIYPics/phcam06.jpg" alt="" /></span></div>
+							 </div>
+					 </div>
+
+
+
+
+										<div class="row gtr-200">
+											<div class="col-6 col-12-medium">
+
+												<!-- Text stuff -->
+
+												<!-- Lists -->
+
+													<div class="row">
+														<div class="col-6 col-12-small">
+
+
+														</div>
+														<div class="col-6 col-12-small">
+
+
+
+
+
+
+														</div>
+													</div>
+
+
+
+
+											</div>
+										</div>
+
+								</section>
+
+						</div>
+					</div>
+
+					<!-- Sidebar -->
+						<div id="sidebar">
+							<div class="inner">
+
+								<!-- Search -->
+									<section id="search" class="alt">
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Search" />
+										</form>
+									</section>
+
+								<!-- Menu -->
+
+
+
+
+
+								<!-- Footer -->
+									<footer id="footer">
+										<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+									</footer>
+
+							</div>
+						</div>
+
+				</div>
+
+		<!-- Scripts -->
+			<script src="assetsFULL/js/jquery.min.js"></script>
+			<script src="assetsFULL/js/browser.min.js"></script>
+			<script src="assetsFULL/js/breakpoints.min.js"></script>
+			<script src="assetsFULL/js/util.js"></script>
+			<script src="assetsFULL/js/main.js"></script>
+
+	</body>
+</html>

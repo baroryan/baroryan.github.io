@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>DIY Projects | Bar Oryan</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
+    <style>
+      /* Reset some basics for better control */
+      html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: auto; /* Ensure the page can scroll */
+          scroll-behavior: smooth; /* Smooth scrolling */
+      }
+
+      /* Main container for content */
+      #main {
+          position: relative; /* Allows content to move normally with the page */
+          padding: 20px; /* Add some padding for spacing */
+          overflow: auto; /* Allow scrolling within the main section if needed */
+          min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+      }
+
+      /* Styling the content */
+      #content {
+          margin: 0 auto; /* Center horizontally */
+          display: flex;
+          flex-direction: column; /* Stack elements vertically */
+          align-items: center; /* Center horizontally */
+          justify-content: flex-start; /* Align items to the top */
+          min-height: 100vh; /* Ensures the content covers the full viewport height */
+          max-width: 1000px; /* Limit width for readability */
+          padding: 20px;
+          border-radius: 10px; /* Optional: rounded corners */
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Optional: subtle shadow */
+          text-align: center; /* Center the text within the content box */
+      }
+
+      .box.alt {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+}
+
+.box.alt .image.fit {
+    flex: 1; /* Allow images to scale within the container */
+    max-width: 200px; /* Limit the maximum width of each image */
+    max-height: 150px; /* Optional: limit the height */
+}
+
+.box.alt img {
+    width: 100%; /* Ensure images fill their containers */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: slightly rounded corners */
+}
+
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+
+            <!-- Header -->
+            <header id="header">
+                <h1>DIY Projects</h1>
+            </header>
+
+            <!-- Content Section -->
+            <section id="content">
+                <p style="font-size: 22px; text-align: left;">While I study earthquake cycles, I occasionally enjoy using Arduino coding,
+                soldering, and inexpensive microchips and sensors to develop tools that can be
+                used to create engaging demonstrations or even to study climate change.
+                Here are some DIY projects I designed and built using affordable tools that anyone
+                can acquire online:</p>
+                <br><br><br>
+                <header id="header">
+                    <h1 style="font-size: 26px">Time Lapse from my (previous) LDEO office window</h2>
+                </header>
+
+                <br><br>
+                <p style="font-size: 22px; text-align: left;">Trying to take advantage of the astonishing four seasons at LDEO, I set up an old smartphone to take pictures from my office window.
+                After two something years and COVID I turned these pictures into timelapses: </p>
+                <br><br>
+
+                <br><br>
+                <h4>Daily, Nov 2018-May 2020:</h4>
+                <iframe width="600" height="420" src="https://www.youtube.com/embed/iq37QS9o34M" allowfullscreen></iframe>
+
+                <br><br>
+                <h4>Hourly, Spring 2020:</h4>
+                <iframe width="600" height="450" src="https://www.youtube.com/embed/Mc-U18n0AH0" allowfullscreen></iframe>
+
+                <br><br>
+                <h4>Hourly, Spring 2019:</h4>
+                <iframe width="600" height="450" src="https://www.youtube.com/embed/8lSygeFBIPM" allowfullscreen></iframe>
+
+                <br><br>
+
+                <p style="font-size: 22px; text-align: left;">I used these tools: </p>
+
+                <br><br>
+
+                <ul style="text-align: left; list-style-type: disc; padding-left: 20px;">
+                    <li>Android OnePlus A3010 with 64 GB</li>
+                    <li><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=en_US">Tasker app</a> - Used to take a picture every hour</li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.joaomgcd.autoinput&hl=en_US">AutoInput app</a> - Used to unlock the screen before taking the pictures</li>
+                    <li><a href="https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite&hl=en_US">Foldersync app</a> – Used to upload the pictures to my cloud every night so I don’t need to touch the phone</li>
+                    <li><a href="https://www.apple.com/imovie/">iMovie</a> – Used to edit the pictures into a movie</li>
+                    <li><a href="https://imagemagick.org/script/convert.php">Convert</a> – Used to add text to the pictures</li>
+                </ul>
+
+
+                <br><br><br>
+
+
+
+
+                <header id="header">
+                    <h1 style="font-size: 26px">Temperature and Humidity Sensors</h2>
+                </header>
+                <br><br>
+
+
+                <p style="font-size: 22px; text-align: left;">Using a few cheap microchips, sensors, Arduino, and MQTT protocol, I built a few sensors that upload their data to an online database accessible online. Use these links to monitor the outdoors temperature at <a href="https://io.adafruit.com/baroryan/dashboards/lamont">Lamont</a> and <a href="https://io.adafruit.com/baroryan/dashboards/living-room">my place</a>.</p>
+                <ul>
+                    <li><a href="https://www.aliexpress.com/item/32831353752.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK">Wemos D1 Mini Microchip</a> - Used to control the sensors and upload data to the database using MQTT</li>
+                    <li><a href="https://www.aliexpress.com/item/4000047757174.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK">AHT10 High Precision Digital Temperature and Humidity Sensor</a> - Indoors temperature and humidity sensor</li>
+                    <li><a href="https://www.aliexpress.com/item/4000143479592.html?spm=a2g0s.9042311.0.0.51b04c4dF5IycK">DS18B20 Temperature Sensor</a> - Outdoors waterproof temperature sensor</li>
+                </ul>
+
+
+                    <div class="box alt">
+                        <div class="image fit"><img src="DIYPics/pic1.jpg" alt="Project Image 1" /></div>
+                        <div class="image fit"><img src="DIYPics/pic2.jpg" alt="Project Image 2" /></div>
+                        <div class="image fit"><img src="DIYPics/pic3.jpg" alt="Project Image 3" /></div>
+                    </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        window.onload = function() { document.body.classList.remove('is-preload'); }
+
+        // Center the section you're scrolling to in the viewport
+        document.querySelectorAll('section').forEach(section => {
+            section.addEventListener('click', () => {
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+
+        window.ontouchmove = function() { return false; }
+        window.onorientationchange = function() { document.body.scrollTop = 0; }
+    </script>
+</body>
+</html>
