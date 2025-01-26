@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Megathrust locking encoded in subduction landscapes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="tortise.png" type="image/png">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVIh4h1oqD30O3X6eF4l1eEhbS3XPSsDYbDJ7ID4aHHZav/4rYfhRmOjBrXJ9pGmX+qG9IJmFk9Zc7cA8FQJ2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2em; /* Adjusted size to make it smaller */
+        }
+
+        p.intro {
+            font-size: 1em; /* Made the intro paragraph slightly smaller */
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .video-wrapper {
+            flex: 1 1 45%;
+            max-width: 45%;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Connecting Text */
+        .connecting-text {
+            font-size: 1.1em;
+            margin: 40px 0 20px 0;
+            color: #2c3e50;
+        }
+
+        .additional-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-link {
+            margin-bottom: 20px;
+        }
+
+        .pdf-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .pdf-link a:hover {
+            text-decoration: underline;
+        }
+
+        .read-more a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more a:hover {
+            background-color: #2980b9;
+        }
+
+        .references {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .references h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .references ul {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .references li {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #555;
+            font-size: 0.9em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 0;
+        }
+
+        footer li {
+            /* Remove default list styling */
+        }
+
+        /* Styling for the Home icon link */
+        footer a.icon {
+            font-size: 1.5em;
+            color: #3498db;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        footer a.icon:hover {
+            color: #2980b9;
+        }
+
+        /* Styling for the label next to the icon */
+        footer .label {
+            margin-left: 5px;
+            font-size: 1em;
+            color: #2c3e50;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .video-wrapper {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .additional-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank you for coming to my talk! </h1>
+
+        <div class="pdf-link">
+            <p>You will find a PDF version of my slides <a href="talks/river_geodesy_talk.pdf" target="_blank">here</a>.</p>
+        </div>
+<br><br>
+        <div class="pdf-link">
+            <p>The first section of the talk is based on <a href="https://www.science.org/doi/10.1126/sciadv.adl4286" target="_blank"> Oryan et al., 2024 </a>. The second section is based on a paper that is currently under review
+               find the <a href="https://doi.org/10.31223/X5T407" target="_blank">preprint here</a>.</p>
+        </div>
+
+        <div class="read-more">
+            <p>If you'd like to learn more about my work or contact me, please check this <a href="../index.html" target="_blank">URL</a>.</p>
+        </div>
+
+        <div class="references">
+            <h2>Full Reference List for talk:</h2>
+            <ul>
+                <li>Cappa, F., Scuderi, M. M., Collettini, C., Guglielmi, Y., & Avouac, J.-P. (2019). Stabilization of fault slip by fluid injection in the laboratory and in situ. Science Advances, 5(3), eaau4065. <a href='https://doi.org/10.1126/sciadv.aau4065'>https://doi.org/10.1126/sciadv.aau4065</a></li>
+                <li>Dal Zilio, L., Jolivet, R., & van Dinther, Y. (2020). Segmentation of the Main Himalayan Thrust Illuminated by Bayesian Inference of Interseismic Coupling. Geophysical Research Letters, 47(4), e2019GL086424. <a href='https://doi.org/10.1029/2019GL086424'>https://doi.org/10.1029/2019GL086424</a></li>
+                <li>Dieterich, J. (1994). A constitutive law for rate of earthquake production and its application to earthquake clustering. Journal of Geophysical Research: Solid Earth, 99(B2), 2601–2618. <a href='https://doi.org/10.1029/93JB02581'>https://doi.org/10.1029/93JB02581</a></li>
+                <li>Dieterich, J., Cayol, V., & Okubo, P. (2000). The use of earthquake rate changes as a stress meter at Kilauea volcano. Nature, 408(6811), 457–460. <a href='https://doi.org/10.1038/35044054'>https://doi.org/10.1038/35044054</a></li>
+                <li>Hager, B. H., Dieterich, J., Frohlich, C., Juanes, R., Mantica, S., Shaw, J. H., et al. (2021). A process-based approach to understanding and managing triggered seismicity. Nature, 595(7869), 684–689. <a href='https://doi.org/10.1038/s41586-021-03668-z'>https://doi.org/10.1038/s41586-021-03668-z</a></li>
+                <li>Heimisson, Elias R., & Segall, P. (2018). Constitutive Law for Earthquake Production Based on Rate-and-State Friction: Dieterich 1994 Revisited. Journal of Geophysical Research: Solid Earth, 123(5), 4141–4156. <a href='https://doi.org/10.1029/2018JB015656'>https://doi.org/10.1029/2018JB015656</a></li>
+                <li>Heimisson, Elías R, Smith, J. D., Avouac, J.-P., & Bourne, S. J. (2022). Coulomb threshold rate-and-state model for fault reactivation: application to induced seismicity at Groningen. Geophysical Journal International, 228(3), 2061–2072. <a href='https://doi.org/10.1093/gji/ggab467'>https://doi.org/10.1093/gji/ggab467</a></li>
+                <li>Helmstetter, A., & Shaw, B. E. (2006). Relation between stress heterogeneity and aftershock rate in the rate-and-state model. Journal of Geophysical Research: Solid Earth, 111(B7). <a href='https://doi.org/10.1029/2005JB004077'>https://doi.org/10.1029/2005JB004077</a></li>
+                <li>Jackson, M., & Bilham, R. (1994). Constraints on Himalayan deformation inferred from vertical velocity fields in Nepal and Tibet. Journal of Geophysical Research: Solid Earth, 99(B7), 13897–13912. <a href='https://doi.org/10.1029/94JB00714'>https://doi.org/10.1029/94JB00714</a></li>
+                <li>Jolivet, R., Simons, M., Duputel, Z., Olive, J., Bhat, H. S., & Bletery, Q. (2020). Interseismic loading of subduction megathrust drives long term uplift in northern Chile, 1–21. <a href='https://doi.org/10.1029/2019GL085377'>https://doi.org/10.1029/2019GL085377</a></li>
+                <li>Kroll, K. A., Richards-Dinger, K. B., Dieterich, J. H., & Cochran, E. S. (2017). Delayed Seismicity Rate Changes Controlled by Static Stress Transfer. Journal of Geophysical Research: Solid Earth, 122(10), 7951–7965. <a href='https://doi.org/10.1002/2017JB014227'>https://doi.org/10.1002/2017JB014227</a></li>
+                <li>Lavé, J., & Avouac, J. P. (2001). Fluvial incision and tectonic uplift across the Himalayas of central Nepal. Journal of Geophysical Research: Solid Earth, 106(B11), 26561–26591. <a href='https://doi.org/10.1029/2001JB000359'>https://doi.org/10.1029/2001JB000359</a></li>
+                <li>Leonard, J. S., & Whipple, K. X. (2021). Influence of Spatial Rainfall Gradients on River Longitudinal Profiles and the Topographic Expression of Spatially and Temporally Variable Climates in Mountain Landscapes. Journal of Geophysical Research: Earth Surface, 126(12), e2021JF006183. <a href='https://doi.org/10.1029/2021JF006183'>https://doi.org/10.1029/2021JF006183</a></li>
+                <li>Leonard, J. S., Whipple, K. X., & Heimsath, A. M. (2023). Isolating climatic, tectonic, and lithologic controls on mountain landscape evolution. Science Advances, 9(3), eadd8915. <a href='https://doi.org/10.1126/sciadv.add8915'>https://doi.org/10.1126/sciadv.add8915</a></li>
+                <li>Lindsey, E. O., Mallick, R., Hubbard, J. A., Bradley, K. E., Almeida, R. V., Moore, J. D. P., et al. (2021). Slip rate deficit and earthquake potential on shallow megathrusts. Nature Geoscience, 14(5), 321–326. <a href='https://doi.org/10.1038/s41561-021-00736-x'>https://doi.org/10.1038/s41561-021-00736-x</a></li>
+                <li>Madella, A., & Ehlers, T. A. (2021). Contribution of background seismicity to forearc uplift. Nature Geoscience, 1–6. <a href='https://doi.org/10.1038/s41561-021-00779-0'>https://doi.org/10.1038/s41561-021-00779-0</a></li>
+                <li>Malatesta, L. C., Bruhat, L., Finnegan, N. J., & Olive, J.-A. L. (2021). Co-location of the Downdip End of Seismic Coupling and the Continental Shelf Break. Journal of Geophysical Research: Solid Earth, 126(1), e2020JB019589. <a href='https://doi.org/10.1029/2020JB019589'>https://doi.org/10.1029/2020JB019589</a></li>
+                <li>Materna, K., Bartlow, N., Wech, A., Williams, C., & Bürgmann, R. (2019). Dynamically Triggered Changes of Plate Interface Coupling in Southern Cascadia. Geophysical Research Letters, 46(22), 12890–12897. <a href='https://doi.org/10.1029/2019GL084395'>https://doi.org/10.1029/2019GL084395</a></li>
+                <li>Maubant, L., Frank, W. B., Wallace, L. M., Williams, C. A., & Hamling, I. (2023). Imaging the Spatiotemporal Evolution of Plate Coupling With Interferometric Radar (InSAR) in the Hikurangi Subduction Zone. Geophysical Research Letters, 50(19), e2023GL105388. <a href='https://doi.org/10.1029/2023GL105388'>https://doi.org/10.1029/2023GL105388</a></li>
+                <li>Meade, B. J. (2010). The signature of an unbalanced earthquake cycle in Himalayan topography? Geology, 38(11), 987–990. <a href='https://doi.org/10.1130/G31439.1'>https://doi.org/10.1130/G31439.1</a></li>
+                <li>Olive, J.-A., Malatesta, L. C., Behn, M. D., & Buck, W. R. (2022). Sensitivity of rift tectonics to global variability in the efficiency of river erosion. Proceedings of the National Academy of Sciences, 119(13), e2115077119. <a href='https://doi.org/10.1073/pnas.2115077119'>https://doi.org/10.1073/pnas.2115077119</a></li>
+                <li>Oryan, B., Betka, P. M., Steckler, M. S., Nooner, S. L., Lindsey, E. O., Mondal, D., et al. (2023). New GNSS and Geological Data From the Indo‐Burman Subduction Zone Indicate Active Convergence on Both a Locked Megathrust and the Kabaw Fault. Journal of Geophysical Research: Solid Earth, 128(4), e2022JB025550. <a href='https://doi.org/10.1029/2022JB025550'>https://doi.org/10.1029/2022JB025550</a></li>
+                <li>Oryan, B., Olive, J.-A., Jolivet, R., Malatesta, L. C., Gailleton, B., & Bruhat, L. (2024). Megathrust locking encoded in subduction landscapes. Science Advances, 10(17), eadl4286. <a href='https://doi.org/10.1126/sciadv.adl4286'>https://doi.org/10.1126/sciadv.adl4286</a></li>
+                <li>Parsons, T., Toda, S., Stein, R. S., Barka, A., & Dieterich, J. H. (2000). Heightened Odds of Large Earthquakes Near Istanbul: An Interaction-Based Probability Calculation. Science, 288(5466), 661–665. <a href='https://doi.org/10.1126/science.288.5466.661'>https://doi.org/10.1126/science.288.5466.661</a></li>
+                <li>Perron, J. T., & Royden, L. (2013). An integral approach to bedrock river profile analysis. Earth Surface Processes and Landforms, 38(6), 570–576. <a href='https://doi.org/10.1002/esp.3302'>https://doi.org/10.1002/esp.3302</a></li>
+                <li>Saillard, M., Audin, L., Rousset, B., Avouac, J.-P., Chlieh, M., Hall, S. R., et al. (2017). From the seismic cycle to long-term deformation: linking seismic coupling and Quaternary coastal geomorphology along the Andean megathrust. Tectonics, 36(2), 241–256. <a href='https://doi.org/10.1002/2016TC004156'>https://doi.org/10.1002/2016TC004156</a></li>
+                <li>Segall, P., & Lu, S. (2015). Injection-induced seismicity: Poroelastic and earthquake nucleation effects. Journal of Geophysical Research: Solid Earth, 120(7), 5082–5103. <a href='https://doi.org/10.1002/2015JB012060'>https://doi.org/10.1002/2015JB012060</a></li>
+                <li>Song, T.-R. A., & Simons, M. (2003). Large Trench-Parallel Gravity Variations Predict Seismogenic Behavior in Subduction Zones. Science, 301(5633), 630–633. <a href='https://doi.org/10.1126/science.1085557'>https://doi.org/10.1126/science.1085557</a></li>
+                <li>Sreejith, K. M., Sunil, P. S., Agrawal, R., Saji, A. P., Rajawat, A. S., & Ramesh, D. S. (2018). Audit of stored strain energy and extent of future earthquake rupture in central Himalaya. Scientific Reports, 8(1), 16697. <a href='https://doi.org/10.1038/s41598-018-35025-y'>https://doi.org/10.1038/s41598-018-35025-y</a></li>
+                <li>Stein, R. S., Barka, A. A., & Dieterich, J. H. (1997). Progressive failure on the North Anatolian fault since 1939 by earthquake stress triggering. Geophysical Journal International, 128(3), 594–604. <a href='https://doi.org/10.1111/j.1365-246X.1997.tb05321.x'>https://doi.org/10.1111/j.1365-246X.1997.tb05321.x</a></li>
+                <li>Toda, S., & Stein, R. S. (2022). Central shutdown and surrounding activation of aftershocks from megathrust earthquake stress transfer. Nature Geoscience, 15(6), 494–500. <a href='https://doi.org/10.1038/s41561-022-00954-x'>https://doi.org/10.1038/s41561-022-00954-x</a></li>
+                <li>Toda, S., Stein, R. S., & Sagiya, T. (2002). Evidence from the AD 2000 Izu islands earthquake swarm that stressing rate governs seismicity. Nature, 419(6902), 58–61. <a href='https://doi.org/10.1038/nature00997'>https://doi.org/10.1038/nature00997</a></li>
+                <li>Wells, R. E., Blakely, R. J., Sugiyama, Y., Scholl, D. W., & Dinterman, P. A. (2003). Basin-centered asperities in great subduction zone earthquakes: A link between slip, subsidence, and subduction erosion?: COSEISMIC SLIP IN GREAT EARTHQUAKES. Journal of Geophysical Research: Solid Earth, 108(B10). <a href='https://doi.org/10.1029/2002JB002072'>https://doi.org/10.1029/2002JB002072</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <ul>
+
+        </ul>
+        <span>@Bar Oryan 2025</span>
+    </footer>
+</body>
+</html>
