@@ -1,0 +1,265 @@
+<main class="snippet">
+
+  <div class="wrap snip-head">
+    <span class="eyebrow">A snippet &middot; Cascadia, 26 January 1700</span>
+    <h1>The forest that drowned</h1>
+    <p>A magnitude&nbsp;9 rupture offshore dropped this coast about a metre in minutes. Salt water reached the roots and killed the forest where it stood. <strong>Tap the markers.</strong></p>
+  </div>
+
+  <div class="wrap">
+    <figure class="scene">
+      <div class="scene-scroll">
+        <div class="scene-frame">
+          <img src="{{COPALIS}}" alt="Panorama of the Copalis River, Washington: tidal salt marsh, bare snags of a drowned forest, living conifers on higher ground, and the Pacific on the horizon.">
+
+          <button class="hot" style="left:10%;  top:50%" data-key="ghost"  aria-label="Ghost forest, left bank"></button>
+          <button class="hot" style="left:77.5%;top:58%" data-key="ghost2" aria-label="Ghost forest, right bank"></button>
+          <button class="hot" style="left:88%;  top:13%" data-key="ocean"  aria-label="The Pacific"></button>
+          <button class="hot" style="left:41%;  top:27%" data-key="new"    aria-label="New trees"></button>
+
+          <div class="pop" id="pop" hidden>
+            <button class="pop-x" id="popx" aria-label="Close">&times;</button>
+            <strong id="popt"></strong>
+            <span id="popb"></span>
+          </div>
+
+          <div class="sheet" id="sheet" hidden>
+            <button class="pop-x" id="sheetx" aria-label="Close">&times;</button>
+            <div class="sheet-body" id="sheetbody"></div>
+          </div>
+        </div>
+      </div>
+
+      <figcaption>
+        <span>Copalis River, Washington</span>
+        <span class="chips">
+          <button class="chip" data-sheet="stages">The four stages</button>
+          <button class="chip" data-sheet="rings">The last ring</button>
+          <button class="chip" data-sheet="orphan">The orphan tsunami</button>
+          <a class="chip" href="index.html">Same cycle, as a graph &rarr;</a>
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div hidden>
+    <div id="tpl-stages">
+      <h3>How a forest becomes a ghost</h3>
+      <div class="stages">
+        <svg viewBox="0 0 900 210" role="img" aria-label="Four sketches: coastal forest above sea level; the ground dropped below high tide, drowning the trees; decades later bare snags stand in salt marsh; today the land has risen and young trees have returned.">
+          <g class="stage">
+            <path class="land" d="M8 106 L200 102 L200 190 L8 190 Z"/>
+            <line class="sea" x1="8" y1="120" x2="48" y2="120"/>
+            <g class="tree"><path d="M46 104 L46 74"/><path d="M46 62 L34 104 L58 104 Z"/></g>
+            <g class="tree"><path d="M96 104 L96 66"/><path d="M96 50 L80 104 L112 104 Z"/></g>
+            <g class="tree"><path d="M152 103 L152 76"/><path d="M152 64 L140 103 L164 103 Z"/></g>
+            <text x="8" y="207">before 1700</text>
+          </g>
+          <g class="stage" transform="translate(233,0)">
+            <path class="water" d="M8 120 L200 120 L200 190 L8 190 Z"/>
+            <path class="land" d="M8 136 L200 133 L200 190 L8 190 Z"/>
+            <line class="sea" x1="8" y1="120" x2="200" y2="120"/>
+            <g class="dead"><path d="M46 134 L46 74"/><path d="M46 62 L34 118 L58 118 Z"/></g>
+            <g class="dead"><path d="M96 133 L96 66"/><path d="M96 50 L80 116 L112 116 Z"/></g>
+            <g class="dead"><path d="M152 133 L152 76"/><path d="M152 64 L140 118 L164 118 Z"/></g>
+            <text x="8" y="207">minutes later</text>
+          </g>
+          <g class="stage" transform="translate(466,0)">
+            <path class="water" d="M8 120 L200 120 L200 190 L8 190 Z"/>
+            <path class="land" d="M8 130 L200 127 L200 190 L8 190 Z"/>
+            <line class="sea" x1="8" y1="120" x2="200" y2="120"/>
+            <g class="snag"><path d="M46 129 L46 78"/><path d="M46 96 L60 88"/><path d="M46 108 L33 100"/></g>
+            <g class="snag"><path d="M96 128 L96 70"/><path d="M96 88 L82 80"/></g>
+            <g class="snag"><path d="M152 128 L152 92"/></g>
+            <text x="8" y="207">decades to centuries</text>
+          </g>
+          <g class="stage" transform="translate(699,0)">
+            <path class="land" d="M8 112 L192 108 L192 190 L8 190 Z"/>
+            <line class="sea" x1="8" y1="120" x2="48" y2="120"/>
+            <g class="snag"><path d="M40 111 L40 84"/><path d="M40 98 L52 91"/></g>
+            <g class="tree"><path d="M100 110 L100 90"/><path d="M100 80 L90 110 L110 110 Z"/></g>
+            <g class="tree"><path d="M146 109 L146 94"/><path d="M146 86 L138 109 L154 109 Z"/></g>
+            <text x="8" y="207">today</text>
+          </g>
+        </svg>
+      </div>
+      <p>Drop, drown, decay, recover &mdash; then the next one. The recovery is interseismic uplift plus tidal mud, which is why spruce are growing on ground that drowned in 1700.</p>
+    </div>
+
+    <div id="tpl-rings">
+      <h3>The last ring is 1699</h3>
+      <div class="ringfig">
+        <svg viewBox="0 0 900 300" role="img" aria-label="A cedar cross-section and a magnified strip of its outer rings: widths stay full up to the ring formed in 1699, after which there is nothing.">
+        <g class="stump">
+          <circle class="bark" cx="152" cy="158" r="118"/>
+          <circle class="ring" cx="152" cy="158" r="113.9"/>
+          <circle class="ring" cx="152" cy="158" r="109.3"/>
+          <circle class="ring" cx="152" cy="158" r="103.1"/>
+          <circle class="ring" cx="152" cy="158" r="99.0"/>
+          <circle class="ring" cx="152" cy="158" r="94.6"/>
+          <circle class="ring" cx="152" cy="158" r="89.9"/>
+          <circle class="ring" cx="152" cy="158" r="87.1"/>
+          <circle class="ring" cx="152" cy="158" r="82.7"/>
+          <circle class="ring" cx="152" cy="158" r="77.8"/>
+          <circle class="ring" cx="152" cy="158" r="72.2"/>
+          <circle class="ring" cx="152" cy="158" r="69.7"/>
+          <circle class="ring" cx="152" cy="158" r="66.3"/>
+          <circle class="ring" cx="152" cy="158" r="63.9"/>
+          <circle class="ring" cx="152" cy="158" r="58.2"/>
+          <circle class="ring" cx="152" cy="158" r="53.0"/>
+          <circle class="ring" cx="152" cy="158" r="50.8"/>
+          <circle class="ring" cx="152" cy="158" r="44.3"/>
+          <circle class="ring" cx="152" cy="158" r="37.9"/>
+          <circle class="ring" cx="152" cy="158" r="32.8"/>
+          <circle class="ring" cx="152" cy="158" r="28.0"/>
+          <circle class="ring" cx="152" cy="158" r="25.3"/>
+          <circle class="ring" cx="152" cy="158" r="23.2"/>
+          <circle class="ring" cx="152" cy="158" r="18.8"/>
+          <circle class="ring" cx="152" cy="158" r="16.5"/>
+          <circle class="ring" cx="152" cy="158" r="13.6"/>
+          <circle class="ring" cx="152" cy="158" r="10.5"/>
+          <circle class="pith" cx="152" cy="158" r="3"/>
+          <path class="wedge" d="M152 158 L267.0 131.5 A118 118 0 0 1 267.0 184.5 Z"/>
+          <text x="152" y="302" text-anchor="middle">western redcedar, ~700 rings</text>
+        </g>
+        <g class="strip">
+          <path class="lead" d="M267.0 184.5 L356 186"/>
+          <path class="lead" d="M267.0 131.5 L356 104"/>
+          <rect class="wood" x="356" y="104" width="406" height="82"/>
+          <rect class="late" x="360.5" y="104" width="1.5" height="82"/>
+          <line class="tick" x1="362.0" y1="186" x2="362.0" y2="193"/>
+          <text x="362.0" y="206" text-anchor="middle">1660</text>
+          <rect class="late" x="370.2" y="104" width="1.5" height="82"/>
+          <rect class="late" x="379.6" y="104" width="1.5" height="82"/>
+          <rect class="late" x="392.6" y="104" width="1.5" height="82"/>
+          <rect class="late" x="402.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="413.9" y="104" width="1.5" height="82"/>
+          <rect class="late" x="423.9" y="104" width="1.5" height="82"/>
+          <rect class="late" x="435.3" y="104" width="1.5" height="82"/>
+          <rect class="late" x="445.0" y="104" width="1.5" height="82"/>
+          <rect class="late" x="453.1" y="104" width="1.5" height="82"/>
+          <rect class="late" x="467.3" y="104" width="1.5" height="82"/>
+          <line class="tick" x1="468.8" y1="186" x2="468.8" y2="193"/>
+          <text x="468.8" y="206" text-anchor="middle">1670</text>
+          <rect class="late" x="481.6" y="104" width="1.5" height="82"/>
+          <rect class="late" x="494.5" y="104" width="1.5" height="82"/>
+          <rect class="late" x="506.3" y="104" width="1.5" height="82"/>
+          <rect class="late" x="514.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="522.4" y="104" width="1.5" height="82"/>
+          <rect class="late" x="530.5" y="104" width="1.5" height="82"/>
+          <rect class="late" x="536.9" y="104" width="1.5" height="82"/>
+          <rect class="late" x="549.1" y="104" width="1.5" height="82"/>
+          <rect class="late" x="558.3" y="104" width="1.5" height="82"/>
+          <rect class="late" x="571.3" y="104" width="1.5" height="82"/>
+          <line class="tick" x1="572.8" y1="186" x2="572.8" y2="193"/>
+          <text x="572.8" y="206" text-anchor="middle">1680</text>
+          <rect class="late" x="580.3" y="104" width="1.5" height="82"/>
+          <rect class="late" x="594.2" y="104" width="1.5" height="82"/>
+          <rect class="late" x="607.2" y="104" width="1.5" height="82"/>
+          <rect class="late" x="612.9" y="104" width="1.5" height="82"/>
+          <rect class="late" x="620.4" y="104" width="1.5" height="82"/>
+          <rect class="late" x="633.9" y="104" width="1.5" height="82"/>
+          <rect class="late" x="643.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="657.8" y="104" width="1.5" height="82"/>
+          <rect class="late" x="666.9" y="104" width="1.5" height="82"/>
+          <rect class="late" x="673.2" y="104" width="1.5" height="82"/>
+          <line class="tick" x1="674.7" y1="186" x2="674.7" y2="193"/>
+          <text x="674.7" y="206" text-anchor="middle">1690</text>
+          <rect class="late" x="684.3" y="104" width="1.5" height="82"/>
+          <rect class="late" x="696.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="704.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="711.2" y="104" width="1.5" height="82"/>
+          <rect class="late" x="719.8" y="104" width="1.5" height="82"/>
+          <rect class="late" x="733.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="746.0" y="104" width="1.5" height="82"/>
+          <rect class="late" x="752.7" y="104" width="1.5" height="82"/>
+          <rect class="late" x="760.5" y="104" width="1.5" height="82"/>
+          <rect class="last" x="754.2" y="104" width="7.8" height="82"/>
+          <line class="tick on" x1="762" y1="96" x2="762" y2="193"/>
+          <text class="on" x="762" y="90" text-anchor="middle">1699 &#8212; last ring</text>
+          <rect class="gone" x="762" y="104" width="106" height="82"/>
+          <text x="815" y="206" text-anchor="middle">no 1700 ring</text>
+          <text x="815" y="149.0" text-anchor="middle" class="dead">dead</text>
+        </g>
+        </svg>
+      </div>
+      <p>A slow drowning thins the rings for years first. These stay wide right to the outermost one and then stop &mdash; an abrupt drop, in the winter of 1699&ndash;1700. Six trees along 100&nbsp;km of coast gave the same year. <em>Schematic, not a scan.</em></p>
+    </div>
+
+    <div id="tpl-orphan">
+      <h3>The orphan tsunami</h3>
+      <p>Nobody on this coast wrote the earthquake down. Japan wrote down the wave: village and castle records describe flooding on 26 January 1700 with no earthquake felt beforehand &mdash; an orphan tsunami, no local parent.</p>
+      <p>Match that date to the tree rings and the sand sheets left inland, and the parent is Cascadia, at about magnitude&nbsp;9. Recurrence here is centuries, so the instrumental record is far too short to contain one. The landscape is the only archive long enough &mdash; which is why the geodesy and the geology in <a href="research.html">my research</a> have to be read together.</p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+(function () {
+  var frame = document.querySelector('.scene-frame');
+  if (!frame) return;
+
+  var TEXT = {
+    ghost:  ['Ghost forest', 'Western redcedar, killed standing. This ground dropped about a metre and the tide reached the roots; the outermost rings date it to the winter of 1699\u20131700.'],
+    ghost2: ['The other bank', 'The subsidence was regional, so everything at this elevation drowned at once. The old forest soil is buried under the marsh, with tsunami sand above it in places.'],
+    ocean:  ['The Pacific', 'The rupture was about 100 km offshore, on the megathrust. Seafloor uplift there sent a tsunami to this beach within half an hour, and to Japan roughly ten hours later.'],
+    'new':  ['New trees', 'Between earthquakes the coast is lifted and tidal mud builds up, so ground that drowned in 1700 now sits above the tides and spruce have returned. The next earthquake undoes it.']
+  };
+
+  var pop = document.getElementById('pop'), popt = document.getElementById('popt'),
+      popb = document.getElementById('popb'), sheet = document.getElementById('sheet'),
+      sheetbody = document.getElementById('sheetbody');
+  var hots = Array.prototype.slice.call(frame.querySelectorAll('.hot'));
+  var open = null;
+
+  function closeAll() {
+    pop.hidden = true; sheet.hidden = true; open = null;
+    hots.forEach(function (h) { h.classList.remove('on'); });
+  }
+
+  function showPop(btn) {
+    var t = TEXT[btn.getAttribute('data-key')];
+    if (!t) return;
+    if (open === btn) { closeAll(); return; }
+    closeAll();
+    open = btn;
+    btn.classList.add('on');
+    popt.textContent = t[0];
+    popb.textContent = t[1];
+    var x = parseFloat(btn.style.left), y = parseFloat(btn.style.top);
+    pop.style.left = Math.min(80, Math.max(20, x)) + '%';
+    pop.style.top = y + '%';
+    pop.style.transform = y < 50
+      ? 'translate(-50%, 22px)'
+      : 'translate(-50%, calc(-100% - 22px))';
+    pop.hidden = false;
+  }
+
+  hots.forEach(function (btn) {
+    btn.addEventListener('click', function (e) { e.stopPropagation(); showPop(btn); });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.chip[data-sheet]'), function (c) {
+    c.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var key = c.getAttribute('data-sheet');
+      var tpl = document.getElementById('tpl-' + key);
+      if (!tpl) return;
+      var already = !sheet.hidden && sheet.getAttribute('data-key') === key;
+      closeAll();
+      if (already) return;
+      sheetbody.innerHTML = tpl.innerHTML;
+      sheet.setAttribute('data-key', key);
+      sheet.hidden = false;
+    });
+  });
+
+  document.getElementById('popx').addEventListener('click', closeAll);
+  document.getElementById('sheetx').addEventListener('click', closeAll);
+  document.addEventListener('click', function (e) {
+    if (!pop.contains(e.target) && !sheet.contains(e.target)) closeAll();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+})();
+</script>

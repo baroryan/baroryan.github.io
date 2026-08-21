@@ -1,0 +1,136 @@
+<main>
+
+<section class="pagehead">
+  <div class="wrap">
+    <span class="eyebrow">Side projects</span>
+    <h1>Projects outside the lab</h1>
+    <p>Many of these projects combine inexpensive electronics with Arduino and Python to build simple tools for teaching, environmental monitoring, and everyday problems.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">Web service</span>
+    <h2>Lehigh EV Charger Watch</h2>
+    <div class="lifegrid wide"><div>
+      <p>EV charging stations at Lehigh can get busy, so I built a small service that queries ChargePoint availability and keeps a running record of when chargers are occupied or free. The accumulated data make it possible to estimate how likely you are to find an available charger at different locations and times of day.</p>
+      <p><a href="ev-charger/index.html">Open the Lehigh EV Charger Watch</a>. Unfortunately, the service is currently available only from the Lehigh campus network or through the Lehigh VPN.</p>
+    </div><div><img src="ev_charger_availability.png" alt="Lehigh EV Charger availability dashboard"></div></div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <span class="eyebrow">Time lapse</span>
+    <h2>Four seasons from my office window</h2>
+    <div class="measure">
+      <p>During my Ph.D. at Lamont&ndash;Doherty Earth Observatory, I pointed an old phone out of my office window and programmed it to take a photograph every hour. Two years later, this is what came out.</p>
+    </div>
+
+    <div class="videos" style="margin-top:30px">
+      <figure class="vid">
+        <button class="frame" data-yt="iq37QS9o34M" aria-label="Play: daily time lapse, November 2018 to May 2020">
+          <img src="https://img.youtube.com/vi/iq37QS9o34M/hqdefault.jpg" alt="" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <figcaption>Daily, Nov 2018 &ndash; May 2020 &middot; <a href="https://www.youtube.com/watch?v=iq37QS9o34M">watch on YouTube</a></figcaption>
+      </figure>
+      <figure class="vid">
+        <button class="frame" data-yt="Mc-U18n0AH0" aria-label="Play: hourly time lapse, spring 2020">
+          <img src="https://img.youtube.com/vi/Mc-U18n0AH0/hqdefault.jpg" alt="" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <figcaption>Hourly, spring 2020 &middot; <a href="https://www.youtube.com/watch?v=Mc-U18n0AH0">watch on YouTube</a></figcaption>
+      </figure>
+      <figure class="vid">
+        <button class="frame" data-yt="8lSygeFBIPM" aria-label="Play: hourly time lapse, spring 2019">
+          <img src="https://img.youtube.com/vi/8lSygeFBIPM/hqdefault.jpg" alt="" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <figcaption>Hourly, spring 2019 &middot; <a href="https://www.youtube.com/watch?v=8lSygeFBIPM">watch on YouTube</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="measure" style="margin-top:34px">
+      <h3>The parts list</h3>
+      <ul class="plain">
+        <li>An old Android phone (OnePlus A3010, 64&nbsp;GB), no longer needed for anything else.</li>
+        <li><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, fires the camera once an hour.</li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.joaomgcd.autoinput">AutoInput</a>, unlocks the screen first. Working out that this was the missing piece took a while.</li>
+        <li><a href="https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite">FolderSync</a>, pushes the night's photos to the cloud so the phone never has to be touched.</li>
+        <li><a href="https://imagemagick.org/script/convert.php">ImageMagick</a> for timestamps, <a href="https://www.apple.com/imovie/">iMovie</a> for the cut.</li>
+      </ul>
+      <p class="note">One lesson: put cardboard or foam between the phone and the glass. In a cold climate the temperature swing at the window is brutal, and mine came back with a badly dented screen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">Sensors</span>
+    <h2>Temperature and humidity, logged to the web</h2>
+    <div class="measure">
+      <p>A handful of cheap boards and sensors, an Arduino sketch, and MQTT are enough to publish live readings to a dashboard anyone can open, including students following <a href="https://io.adafruit.com/baroryan/dashboards/albedo">an albedo experiment I built for a class</a>.</p>
+      <ul class="plain">
+        <li><a href="https://www.wemos.cc/">Wemos D1 mini</a>, reads the sensors and publishes over MQTT.</li>
+        <li>AHT10 digital temperature and humidity sensor, indoors.</li>
+        <li>DS18B20 waterproof probe, outdoors.</li>
+      </ul>
+      <p><a href="https://www.adafruit.com/">Adafruit</a> has excellent guides if you want to build one. Happy to share my Arduino code.</p>
+    </div>
+
+    <div class="gallery" style="margin-top:30px">
+      <figure><img src="DIYPics/pic1.jpg" alt="Two Wemos D1 mini boards wired up on the bench" loading="lazy"></figure>
+      <figure><img src="DIYPics/pic2.jpg" alt="The waterproof DS18B20 probe on a breadboard" loading="lazy"></figure>
+      <figure><img src="DIYPics/pic3.jpg" alt="The finished logger, breadboarded with both sensors attached" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <span class="eyebrow">Instrument network</span>
+    <h2>The LDEO PhenoCam network</h2>
+    <div class="measure">
+      <p>With <a href="https://www.ldeo.columbia.edu/user/mukund">Mukund Rao</a> and funding from the Chevron Student Initiative Fund, I designed and built a camera network to track hourly-to-seasonal change in the forest canopy on the Lamont campus.</p>
+      <p>Forests offset a substantial share of anthropogenic carbon emissions, taking up carbon through photosynthesis and storing a fraction of it as biomass, and climate change is shifting the seasonal rhythm that process depends on. A camera pointed at the canopy every hour, for years, is a cheap way to watch that shift happen.</p>
+      <p>The system pairs infrared cameras, a Raspberry Pi build of our own and a commercial StarDot unit, with dendrometers on two trees inside the field of view, so canopy greenness and stem growth can be read together, alongside local temperature. The project later developed into a study of forest phenology and climate sensitivity.</p>
+      <ul class="plain">
+        <li><a href="https://phenocam.sr.unh.edu/webcam/sites/ldeocam/">Image archive</a> at the PhenoCam Network.</li>
+        <li><a href="https://ecosensornetwork.com/app/auth/">Dendrometer data</a>.</li>
+        <li><a href="https://news.climate.columbia.edu/2020/11/03/phenocam-forests-climate-change/">A write-up of the project</a> from the Columbia Climate School.</li>
+        <li><a href="https://www.science.org/doi/10.1126/sciadv.ady7139">Rao et al. (2026)</a>, <i>Science Advances</i>.</li>
+      </ul>
+    </div>
+
+    <div class="gallery four" style="margin-top:30px">
+      <figure><img src="DIYPics/phcam01.jpg" alt="The StarDot camera on the rooftop mast, looking out over the forest canopy" loading="lazy"></figure>
+      <figure><img src="DIYPics/phcam02.jpg" alt="Two of us on the roof installing the camera on a grey autumn day" loading="lazy"></figure>
+      <figure><img src="DIYPics/phcam03.jpg" alt="The Raspberry Pi camera build in a clear enclosure" loading="lazy"></figure>
+      <figure><img src="DIYPics/phcam06.jpg" alt="A dendrometer clamped to a trunk inside the camera field of view" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+
+
+
+</main>
+
+<script>
+// Click-to-play: the thumbnail is swapped for the player only when asked. Keeps the
+// page light, keeps YouTube's cookies out until you opt in, and leaves a plain link
+// underneath in case the embed is blocked (it is, for example, on file:// URLs).
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll('.frame[data-yt]'), function (b) {
+    b.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+      f.title = b.getAttribute('aria-label') || 'Time lapse';
+      f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      f.setAttribute('allowfullscreen', '');
+      b.parentNode.replaceChild(f, b);
+    });
+  });
+})();
+</script>
