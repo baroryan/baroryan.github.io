@@ -636,6 +636,15 @@ a.chip{ border-bottom:1px solid var(--rule); }
   #phaseword{ font-size:clamp(30px,8vw,44px); }
 }
 
+.home-research{padding:58px 0;border-bottom:1px solid var(--rule);background:var(--paper);}
+.home-research-grid{display:block;}
+.home-research-copy{max-width:72ch;}
+.home-research-copy h2{margin-bottom:.55em;}
+.home-research-copy p{color:var(--slate);}
+.home-research-copy p:last-of-type{margin-bottom:0;}
+.home-research-copy .actions{margin:24px 0 0;}
+@media(max-width:760px){.home-research{padding:44px 0}}
+
 </style>
 </head>
 <body>
@@ -673,7 +682,7 @@ a.chip{ border-bottom:1px solid var(--rule); }
     </div>
 
     <div class="hero-copy">
-      <p class="lede">I study how subduction zones <span class="store-word">store</span> and <span class="release-word">release strain</span> over minutes, years, and tens of thousands of years using geodesy, geomorphology, physics-based earthquake-cycle simulations, and machine learning.</p>
+      <p class="lede">Earthquakes remain both devastating and surprisingly poorly understood. I study how subduction zones <span class="store-word">store</span> and <span class="release-word">release strain</span> from seconds to tens of thousands of years using geodesy, geomorphology, physics-based earthquake-cycle simulations, and data-driven methods.</p>
     </div>
   </div>
 
@@ -802,7 +811,23 @@ a.chip{ border-bottom:1px solid var(--rule); }
   </div>
 </section>
 
-<section class="band">
+<section class="home-research">
+  <div class="wrap">
+    <div class="home-research-grid">
+      <div class="home-research-copy">
+        <span class="eyebrow">Research</span>
+        <h2>Understanding earthquake cycles</h2>
+        <p>Earthquake cycles span an extraordinary range of timescales, from ruptures lasting seconds to deformation accumulated over tens to hundreds of earthquakes. My research asks how these different parts of the cycle are connected, and what they can tell us about the mechanics and hazards of subduction zones.</p>
+        <p>I approach these questions by combining geodesy, geomorphology, physics-based numerical simulations, and data-driven methods. Modern geodetic observations capture deformation over years to decades, numerical models allow us to explore the physical processes governing earthquake cycles, while landscapes preserve a record of deformation accumulated over much longer timescales. Together, these approaches provide complementary windows into parts of the earthquake cycle that no single method can capture on its own.</p>
+        <p>I am also passionate about developing <strong>open datasets, computational tools, and community infrastructure</strong> that turn individual research efforts into shared resources for the earthquake science community.</p>
+        <div class="actions"><a class="btn primary" href="research.html">Explore my research &rarr;</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="band tint">
   <div class="wrap">
     <span class="eyebrow">Everything else</span>
     <h2>Where to go next</h2>
